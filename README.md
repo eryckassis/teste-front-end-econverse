@@ -8,7 +8,11 @@ O objetivo não foi apenas reproduzir uma imagem estática. A entrega inclui val
 
 
 
-https://github.com/user-attachments/assets/1a4b0228-2521-4e06-8e91-84c4cd1962a4
+
+https://github.com/user-attachments/assets/95c2e57c-1d9d-48b2-baa4-43300c34d568
+
+
+
 
 
 
