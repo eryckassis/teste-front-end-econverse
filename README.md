@@ -1,10 +1,21 @@
 # Econverse
+<img width="849" height="654" alt="image" src="https://github.com/user-attachments/assets/3def3a5c-f0d9-457b-89bd-6976eec3ae09" />
+
 
 Implementação de uma vitrine de e-commerce desenvolvida para um teste técnico de front-end. O projeto parte de um layout disponibilizado no Figma, consome a API fornecida no desafio e transforma essa referência em uma página responsiva, navegável e preparada para lidar com dados externos.
 
 O objetivo não foi apenas reproduzir uma imagem estática. A entrega inclui validação do contrato da API, estados de carregamento e erro, interações, testes automatizados, semântica HTML, acessibilidade e uma organização que permite manter o código sem concentrar todas as responsabilidades em um único componente.
 
-<!-- Adicionar aqui uma imagem da página completa em desktop. -->
+
+
+https://github.com/user-attachments/assets/1a4b0228-2521-4e06-8e91-84c4cd1962a4
+
+
+
+
+
+
+
 
 ## Tecnologias
 
@@ -252,7 +263,8 @@ A referência visual foi transformada em uma interface com comportamento. O proj
 
 A busca e a newsletter representam a interação de front-end prevista para a entrega. Elas não simulam uma integração de catálogo ou cadastro que não foi fornecida pelo desafio.
 
-<!-- Adicionar aqui imagens do modal, do seletor de quantidade e do formulário. -->
+<img width="1434" height="486" alt="image" src="https://github.com/user-attachments/assets/0e614533-ee2c-4803-a2dc-3710db6f9836" />
+
 
 ## Figma, MCP e validação humana
 
@@ -260,7 +272,8 @@ Utilizei um MCP como apoio para acessar o design do Figma e trazer informações
 
 Cada decisão continuou passando por validação humana. Foi necessário conferir hierarquia, proporções, conteúdo, comportamento, semântica, responsividade e coerência entre os componentes. O MCP ajudou a aproximar a implementação do arquivo original; a responsabilidade de avaliar se o resultado funcionava como produto continuou sendo minha.
 
-<!-- Adicionar aqui uma comparação entre o frame do Figma e a implementação. -->
+<img width="2559" height="1079" alt="image" src="https://github.com/user-attachments/assets/98d1a373-9f0f-40a6-a47d-952dc1cfcaab" />
+
 
 ## UI/UX antes de pixel perfect
 
@@ -284,7 +297,8 @@ A página foi estruturada para se adaptar ao conteúdo e à largura disponível.
 
 No mobile, o foco passa a ser legibilidade, ordem do conteúdo e áreas de interação adequadas. Em telas maiores, a composição aproveita o espaço para se aproximar do frame de desktop. Essa abordagem mantém o mesmo conteúdo e evita criar duas implementações independentes da página.
 
-<!-- Adicionar aqui imagens das versões desktop, tablet e mobile. -->
+<img width="357" height="781" alt="image" src="https://github.com/user-attachments/assets/5ca1ec01-16ca-497e-b915-b7a3596762f5" />
+
 
 ## Manutenção e evolução
 
