@@ -90,11 +90,7 @@
     display: block;
     width: 2rem;
     height: 2rem;
-
-    img {
-      width: 2rem;
-      height: 2rem;
-    }
+    pointer-events: none;
   }
 
   .productGrid {
@@ -119,4 +115,31 @@
   .productGrid {
     grid-template-columns: repeat(4, 304px);
   }
+}
+
+.emptyState {
+  display: flex;
+  min-height: 12rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.emptyTitle {
+  color: var(--ink-strong);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.emptyDescription {
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
