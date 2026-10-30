@@ -1,4 +1,4 @@
-@use '../../../styles/mixins' as mixins;
+@use "../../../styles/mixins" as mixins;
 
 .siteHeader {
   width: 100%;
@@ -27,6 +27,10 @@
   gap: 0.5rem;
 }
 
+.benefitEmphasis {
+  color: var(--brand);
+  font-weight: 700;
+}
 .benefitIconFirst {
   flex-direction: row;
 }
@@ -150,7 +154,9 @@
 
   .mainRow {
     display: grid;
-    grid-template-columns: minmax(8.6875rem, 25.390625%) minmax(0, 39.375rem) 1fr;
+    grid-template-columns:
+      minmax(8.6875rem, 25.390625%) minmax(0, 39.375rem)
+      1fr;
     height: 4.5rem;
     padding-block: 0;
     gap: 0;

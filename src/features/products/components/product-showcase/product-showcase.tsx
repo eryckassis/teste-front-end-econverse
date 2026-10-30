@@ -25,6 +25,7 @@ export function ProductShowcase({
   const [activeTab, setActiveTab] = useState(showcaseTabs[0]);
   const [selected, setSelected] = useState<Product | null>(null);
   const titleId = `${id}-title`;
+  const hasProducts = products.length > 0;
 
   return (
     <section
@@ -34,18 +35,21 @@ export function ProductShowcase({
     >
       <SectionTitle id={titleId} title={title} />
 
-      {showTabs ? (
+      {showTabs && hasProducts ? (
         <div role="group" aria-label="Filtrar produtos" className={styles.tabs}>
           <div className={styles.tabList}>
             {showcaseTabs.map((tab) => {
               const isActive = tab === activeTab;
+
               return (
                 <button
                   key={tab}
                   type="button"
                   onClick={() => setActiveTab(tab)}
                   aria-pressed={isActive}
-                  className={`${styles.tab} ${isActive ? styles.tabActive : styles.tabInactive}`}
+                  className={`${styles.tab} ${
+                    isActive ? styles.tabActive : styles.tabInactive
+                  }`}
                 >
                   {tab}
                 </button>
@@ -55,25 +59,47 @@ export function ProductShowcase({
         </div>
       ) : null}
 
-      <div className={styles.carousel}>
-        <span aria-hidden="true" className={styles.arrowIcon}>
-          <Image src="/figma/arrow-left.svg" alt="" width={40} height={40} />
-        </span>
+      {hasProducts ? (
+        <>
+          <div className={styles.carousel}>
+            <span aria-hidden="true" className={styles.arrowIcon}>
+              <Image
+                src="/figma/arrow-left.svg"
+                alt=""
+                width={40}
+                height={40}
+              />
+            </span>
 
-        <ul className={styles.productGrid}>
-          {products.slice(0, 4).map((product) => (
-            <li key={product.id}>
-              <ProductCard product={product} onSelect={setSelected} />
-            </li>
-          ))}
-        </ul>
+            <ul className={styles.productGrid}>
+              {products.slice(0, 4).map((product) => (
+                <li key={product.id}>
+                  <ProductCard product={product} onSelect={setSelected} />
+                </li>
+              ))}
+            </ul>
 
-        <span aria-hidden="true" className={styles.arrowIcon}>
-          <Image src="/figma/arrow-right.svg" alt="" width={40} height={40} />
-        </span>
-      </div>
+            <span aria-hidden="true" className={styles.arrowIcon}>
+              <Image
+                src="/figma/arrow-right.svg"
+                alt=""
+                width={40}
+                height={40}
+              />
+            </span>
+          </div>
 
-      <ProductModal product={selected} onClose={() => setSelected(null)} />
+          <ProductModal product={selected} onClose={() => setSelected(null)} />
+        </>
+      ) : (
+        <div className={styles.emptyState} role="status">
+          <p className={styles.emptyTitle}>Nenhum produto disponível</p>
+
+          <p className={styles.emptyDescription}>
+            Novos produtos podem ser adicionados em breve.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

@@ -28,7 +28,7 @@ const siteDescription =
 export const metadata: Metadata = {
   title: {
     default: siteTitle,
-    template: `% | ${siteName}`,
+    template: `%s | ${siteName}`,
   },
   description: siteDescription,
   applicationName: siteName,
@@ -79,7 +79,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${poppins.variable} ${outfit.variable}`}>
       <body>
         {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
+        {process.env.NODE_ENV === "production" ? <Analytics /> : null}
       </body>
     </html>
   );
